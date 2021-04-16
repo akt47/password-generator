@@ -1,10 +1,11 @@
 // Assignment code here
+//variables of characters to select from
+var passSelect = "";
+var speChar = " !@#$%^&*+',-./:;<=>?~\|";
+var upper= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lower= "abcdefghijklmnopqrstuvwxyz";
+var num= "0123456789";
 
-
-function generatePassword() {
-  var passwordLength= window.prompt ("Length of password");
-  console.log(passwordLength)
-}
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -16,6 +17,52 @@ function writePassword() {
   passwordText.value = password;
 
 }
+// critieria prompts
+function generatePassword() {
+
+  //uppercase
+  var up = window.prompt ("Do you want UPPERCASE?");
+  if (up === true) { passSelect = passSelect + uppercase;
+  }
+  else{
+    passSelect=passSelect;
+  }
+  console.log(up)
+    
+  //lowercase
+  var low = window.prompt ("Do you want lowercase?");
+  if (low === true) {
+    passSelect = passSelect + lowercase;
+  }
+  else {
+    passSelect=passSelect
+  }
+  console.log(low)
+
+  //num
+  var num = window.prompt ("Do you want a number?");
+  if (num === true) {
+    passSelect = passSelect + number;
+  }
+  else {
+    passSelect=passSelect
+  }
+  console.log(num)
+
+  //special Character
+  var speChar = window.prompt ("Do you want special characters");
+  if (speChar === true) {
+    passSelect = passSelect + speChar
+  }
+else {
+  passSelect = passSelect
+}
+console.log(speChar)
+
+}
+
+
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
