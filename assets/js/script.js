@@ -51,7 +51,7 @@ function generatePassword() {
 
 
   //special Character
-  var speChar = window.confirm ("Do you want special characters");
+  var speChar = window.confirm ("Do you want special characters?");
   if (speChar === true) {
     //pulls from speChar
     passSelect = passSelect + character
